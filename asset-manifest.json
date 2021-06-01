@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/susanoo/static/css/main.5257931d.chunk.css",
-    "main.js": "/susanoo/static/js/main.032f90ed.chunk.js",
-    "main.js.map": "/susanoo/static/js/main.032f90ed.chunk.js.map",
-    "runtime-main.js": "/susanoo/static/js/runtime-main.c7862754.js",
-    "runtime-main.js.map": "/susanoo/static/js/runtime-main.c7862754.js.map",
-    "static/js/2.3b16ae0a.chunk.js": "/susanoo/static/js/2.3b16ae0a.chunk.js",
-    "static/js/2.3b16ae0a.chunk.js.map": "/susanoo/static/js/2.3b16ae0a.chunk.js.map",
-    "index.html": "/susanoo/index.html",
-    "static/css/main.5257931d.chunk.css.map": "/susanoo/static/css/main.5257931d.chunk.css.map",
-    "static/js/2.3b16ae0a.chunk.js.LICENSE.txt": "/susanoo/static/js/2.3b16ae0a.chunk.js.LICENSE.txt"
+    "main.css": "/sanoo/static/css/main.5257931d.chunk.css",
+    "main.js": "/sanoo/static/js/main.032f90ed.chunk.js",
+    "main.js.map": "/sanoo/static/js/main.032f90ed.chunk.js.map",
+    "runtime-main.js": "/sanoo/static/js/runtime-main.c6e0dcbe.js",
+    "runtime-main.js.map": "/sanoo/static/js/runtime-main.c6e0dcbe.js.map",
+    "static/js/2.3b16ae0a.chunk.js": "/sanoo/static/js/2.3b16ae0a.chunk.js",
+    "static/js/2.3b16ae0a.chunk.js.map": "/sanoo/static/js/2.3b16ae0a.chunk.js.map",
+    "index.html": "/sanoo/index.html",
+    "static/css/main.5257931d.chunk.css.map": "/sanoo/static/css/main.5257931d.chunk.css.map",
+    "static/js/2.3b16ae0a.chunk.js.LICENSE.txt": "/sanoo/static/js/2.3b16ae0a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c7862754.js",
+    "static/js/runtime-main.c6e0dcbe.js",
     "static/js/2.3b16ae0a.chunk.js",
     "static/css/main.5257931d.chunk.css",
     "static/js/main.032f90ed.chunk.js"
