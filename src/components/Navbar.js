@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import {Link} from 'react-router-dom';
 var isNavbarEnable = 0;
 function expandNavbar(){
   if(!isNavbarEnable){
@@ -45,11 +45,34 @@ function Navbar(){
       </div>
       <nav id="nav-container" className = "nav-container">
         <ul className = "nav-list">
+          {/*<li className = "nav-item ">
+            <input className="input-box vcenter" value = {0} type = "number" placeholder = "Jump To" />
+          </li>*/}
+
           <li className = "nav-item">
-            <p className="vcenter" > Jump To </p>
+            <Link to='/view/1' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+              <p className="vcenter"> First Year </p>
+            </Link>
           </li>
           <li className = "nav-item">
-            <p className="vcenter"> Quick Access </p>
+            <Link to='/view/40' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+              <p className="vcenter"> Second Year </p>
+            </Link>
+          </li>
+          <li className = "nav-item">
+            <Link to='/view/86' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+              <p className="vcenter"> Third Year </p>
+            </Link>
+          </li>
+          <li className = "nav-item">
+            <Link to='/view/157' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+              <p className="vcenter"> Fourth Year </p>
+            </Link>
+          </li>
+          <li className = "nav-item">
+            <Link to='/view/173' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+              <p className="vcenter"> Hall of Fame </p>
+            </Link>
           </li>
         </ul>
       </nav>

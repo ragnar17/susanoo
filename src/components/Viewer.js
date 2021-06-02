@@ -1,29 +1,43 @@
 import React, { PureComponent } from 'react';
+import {Link} from 'react-router-dom';
 
-
+var N = 254
 class Viewer extends PureComponent {
   constructor(props){
     super()
     this.state = {
-      cur : 1
+      cur : props.match.params.pageId
     };
-    this.nextImage = this.nextImage.bind(this)
+    this.changeImage = this.changeImage.bind(this)
   }
 
-  nextImage()
+  changeImage(tmp)
   {
-    // if (window.screen.width == window.innerWidth && window.screen.height == window.innerHeight) {
-    //     console.log("hhhhhhhhhhhhh")
-    // }
     this.setState({
-      cur : (this.state.cur)%3 + 1
+      cur : tmp
     })
+  }
+    componentDidUpdate(prevProps) {
+    if (this.props.match.params.pageId !== prevProps.match.params.pageId) {
+      this.changeImage(this.props.match.params.pageId);
+    }
   }
   render(){
       return (
       <div>
-        <img className = "bg-image" src={process.env.PUBLIC_URL + '/images'+'/'+this.state.cur+'.jpg'} alt="logo" />
-        <button onClick={this.nextImage}>Next</button>
+        <Link to={'/view/'+((this.state.cur-1)==0 ? N : (this.state.cur-1))}>
+          <div class="left-button opacity0">
+          </div>
+        </Link>
+        <Link to={'/view/'+((this.state.cur)%N+1)}>
+          <div class="right-button opacity0">
+          </div>
+        </Link>
+        <div className="page-no">
+          <p className = "page-no-text">{this.state.cur}</p>
+        </div>
+        <img className = "bg-image" src={process.env.PUBLIC_URL + '/images'+'/'+'A ('+this.state.cur+').jpg'} alt="logo" />
+
       </div>
     )
   }
