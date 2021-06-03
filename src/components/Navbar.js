@@ -48,32 +48,51 @@ function Navbar(){
           {/*<li className = "nav-item ">
             <input className="input-box vcenter" value = {0} type = "number" placeholder = "Jump To" />
           </li>*/}
+          <li className = "nav-item">
+            <Link to='/susanoo' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+              <div className="button-box">
+                <p className="vcenter"> Home </p>
+              </div>
+            </Link>
+          </li>
 
           <li className = "nav-item">
             <Link to='/view/1' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+            <div className="button-box">
               <p className="vcenter"> First Year </p>
+            </div>
             </Link>
           </li>
+
           <li className = "nav-item">
             <Link to='/view/40' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+            <div className="button-box">
               <p className="vcenter"> Second Year </p>
+            </div>
             </Link>
           </li>
           <li className = "nav-item">
             <Link to='/view/86' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+            <div className="button-box">
               <p className="vcenter"> Third Year </p>
+            </div>
             </Link>
           </li>
           <li className = "nav-item">
             <Link to='/view/157' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+            <div className="button-box">
               <p className="vcenter"> Fourth Year </p>
+            </div>
             </Link>
           </li>
           <li className = "nav-item">
             <Link to='/view/173' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+            <div className="button-box">
               <p className="vcenter"> Hall of Fame </p>
-            </Link>
+            </div>
+          </Link>
           </li>
+
         </ul>
       </nav>
     </div>
