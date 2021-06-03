@@ -8,8 +8,8 @@ class Viewer extends PureComponent {
     document.documentElement.setAttribute('data-theme','light');
     this.state = {
       cur : props.match.params.pageId,
-      width : (1920.0/1080.0)*(window.innerHeight-5),
-      height : window.innerHeight-5,
+      width : window.innerHeight < window.innerWidth ? (1920.0/1080.0)*(window.innerHeight-5) : window.innerWidth-5,
+      height : window.innerHeight < window.innerWidth ? window.innerHeight-5 : (1080.0/1920.0)*(window.innerWidth-5),
       pwidth : window.innerWidth,
       pheight : window.innerHeight,
     };
@@ -19,17 +19,14 @@ class Viewer extends PureComponent {
 
   changeImage(tmp)
   {
-    console.log(window.screen.width + " "+ window.screen.height)
-    console.log(window.innerWidth + " "+ window.innerHeight)
-    console.log(this.state.width+" "+this.state.height)
     this.setState({
       cur : tmp
     })
   }
   changeReso(){
     this.setState({
-      width : (1920.0/1080.0)*(window.innerHeight-5),
-      height : window.innerHeight-5,
+      width : window.innerHeight < window.innerWidth ? (1920.0/1080.0)*(window.innerHeight-5) : window.innerWidth-5,
+      height : window.innerHeight < window.innerWidth ? window.innerHeight-5 : (1080.0/1920.0)*(window.innerWidth-5),
       pwidth : window.innerWidth,
       pheight : window.innerHeight
     })
