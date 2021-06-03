@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Link} from 'react-router-dom';
+import {Link,useHistory} from 'react-router-dom';
 var isNavbarEnable = 0;
+var jump_page;
+var N = 254
 function expandNavbar(){
   if(!isNavbarEnable){
     document.getElementById('nav-container').style.cssText = 'display:inline';
@@ -16,7 +18,21 @@ function expandNavbar(){
   }
   isNavbarEnable ^= 1
 }
+
 function Navbar(){
+  const history = useHistory();
+
+  function handlePage(event) {
+    event.preventDefault();
+    var page_no = event.target[0].value;
+    if(page_no < 1 || page_no > N)
+    {
+      alert("Enter page no. b/w [1,"+N+"].")
+      return ;
+    }
+    history.push("/view/"+page_no)
+    // console.log(event.target[0].value)
+  }
 
   return (
     <div>
@@ -45,9 +61,14 @@ function Navbar(){
       </div>
       <nav id="nav-container" className = "nav-container">
         <ul className = "nav-list">
-          {/*<li className = "nav-item ">
-            <input className="input-box vcenter" value = {0} type = "number" placeholder = "Jump To" />
-          </li>*/}
+          <li className = "nav-item ">
+            <div className="button-box">
+              <form onSubmit={handlePage}>
+                <input className="input-box" value = {jump_page} type = "number" placeholder = "Jump To" />
+              </form>
+            </div>
+
+          </li>
           <li className = "nav-item">
             <Link to='/susanoo' style={{ color: 'inherit', textDecoration: 'inherit'}}>
               <div className="button-box">

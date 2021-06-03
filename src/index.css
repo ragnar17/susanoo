@@ -295,14 +295,14 @@ a:active,a:hover{
   text-decoration-style: none;
   border-color: var(--text-color);
   border-radius: 5rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   border-width: 0px;
   outline : none;
   resize : none;
   background: var(--input-color);
   width: 6rem;
   height: 2.5rem;
-  padding : 1rem;
+  padding-left : 1rem;
   color : var(--text-light-color);
 }
 
@@ -353,4 +353,15 @@ a:active,a:hover{
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
